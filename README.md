@@ -28,32 +28,34 @@ waypoints estimated in task.
 3) Target Speed Prediction: In addition to the spatial path, we need to know how fast the car should drive on the path. Heuristically, the car should accelerate to a maximum velocity if the path is smooth and decelerate before corners. 
 
 <p align="center">
-  <img src="images/velocity.png" width="500" height="100" title="hover text">
+  <img src="images/velocity.png" width="700" height="100" title="hover text">
 </p>
 
 The thrid module of the pipeline is to build a controller for steering the vehicle on the predicted path. The code for this can be found in lateral_control.py
 
 1) Stanley Controller: We use the Stanley control theory to determine the angle of curvature using the following equation.
 <p align="center">
-  <img src="images/stanley.png" width="500" height="100" title="hover text">
-  <img src="images/stanley2.png" width="500" height="100" title="hover text">
+  <img src="images/stanley.png" width="200" height="50" title="hover text">
+ </p>
+ <p>
+  <img src="images/stanley2.png" width="900" height="50" title="hover text">
 </p>
 2) Damping: We now improve the steering angle control by damping the difference between the steering command and the steering wheel angle of the previous step.
 <p align="center">
-  <img src="images/damping.png" width="500" height="100" title="hover text">
+  <img src="images/damping.png" width="350" height="70" title="hover text">
 </p>
 
 
 In the fourth module we set up a control law for gas and braking.
 1) PID Controller:For implementing the PID controller, we must use a discretized version of the control law
 <p align="center">
-  <img src="images/pid.png" width="500" height="100" title="hover text">
+  <img src="images/pid.png" width="400" height="80" title="hover text">
 </p>
 
 If the control signal u(t) is larger than 0, we choose the gas value equal to the control signal. If u
 is smaller than 0, we choose the brake value equal to the negative control signal:
 <p align="center">
-  <img src="images/gas.png" width="500" height="100" title="hover text">
+  <img src="images/gas.png" width="500" height="70" title="hover text">
 </p>
 
 
