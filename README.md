@@ -1,4 +1,6 @@
 # Modular-Pipeline-Car
+The following is a Modular Pipeline based implementation of a CarRacing agent simulated on the Gym environment. The pipeline contains a Lane Detection module, a path planning module and control unit.
+
 
 To install the gym environment,<br>
 1) extract sdc_gym.zip<br>
