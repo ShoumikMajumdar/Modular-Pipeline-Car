@@ -35,14 +35,14 @@ The thrid module of the pipeline is to build a controller for steering the vehic
 
 1) Stanley Controller: We use the Stanley control theory to determine the angle of curvature using the following equation.
 <p align="center">
-  <img src="images/stanley.png" width="200" height="50" title="hover text">
+  <img src="images/stanley.png" width="300" height="70" title="hover text">
  </p>
  <p>
   <img src="images/stanley2.png" width="900" height="50" title="hover text">
 </p>
 2) Damping: We now improve the steering angle control by damping the difference between the steering command and the steering wheel angle of the previous step.
 <p align="center">
-  <img src="images/damping.png" width="350" height="70" title="hover text">
+  <img src="images/damping.png" width="300" height="60" title="hover text">
 </p>
 
 
